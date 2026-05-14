@@ -1,0 +1,797 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Jun 8, 2025, 4:32:28 PM
+    Author     : LENOVO
+*/
+
+/* File: webapp/assets/css/all.css */
+/* File: webapp/assets/css/all.css */
+/* File: webapp/assets/css/all.css - VERSI FINAL BERSIH */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* --- Global & Background Halaman --- */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9ebee;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Container Utama untuk Tampilan Ponsel --- */
+.mobile-container {
+    max-width: 420px;
+    margin: auto;
+    background: #f0f2f5;
+    min-height: 115vh;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* --- Navbar Atas yang Fixed --- */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 420px;
+    background-color: #c00000;
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.top-navbar h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.top-navbar .navbar-action {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.top-navbar .navbar-logo {
+    height: 35px;
+}
+
+/* --- Footer Navigasi yang Fixed --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 420px;
+    background-color: #c00000;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.nav-item i {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+/* --- Main Content yang Bisa Scroll --- */
+.main-content {
+    padding: 16px;
+    color: #333;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.main-content-home {
+    padding: 16px;
+    color: #333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* --- Header di Halaman Beranda --- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Membuat elemen di dalamnya terpisah */
+    padding:30px;
+    background-color: #c00000;
+    color: white; /* Warna teks default di header */
+}
+
+.header .profile-summary {
+    display: flex;
+    align-items: center;
+}
+
+.profile-summary-akunsaya {
+    display: flex;
+    flex-direction: column; /* Mengubah arah flex menjadi vertikal */
+    align-items: center;
+    padding: 24px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+}
+
+.profile-summary-akunsaya .profile-pic {
+    width: 80px;  /* Perbesar ukuran lingkaran */
+    height: 80px;
+    border-radius: 50%; /* Wajib agar bulat */
+    background-color: #c00000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 36px; /* Perbesar ukuran font inisial */
+    margin-right: 0; /* Hapus margin kanan karena sudah di tengah */
+    margin-bottom: 12px; /* Beri jarak ke nama di bawahnya */
+
+    /* --- INI BAGIAN BINGKAI FOTO PROFIL --- */
+    border: 4px solid #fff; /* Bingkai putih di dalam */
+    outline: 2px solid black; /* Bingkai abu-abu tipis di luar */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bayangan agar lebih menonjol */
+}
+
+/* Style untuk Profile Info di dalam .profile-summary-akunsaya */
+.profile-summary-akunsaya .profile-info {
+    text-align: center; /* Pusatkan teks (nama) */
+}
+
+.profile-summary-akunsaya .username {
+    font-size: 20px; /* Perbesar nama pengguna */
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.header .profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Wajib agar bulat */
+    background-color: #fff; /* Latar belakang putih */
+    color: #c00000; /* Warna teks (inisial) merah */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.header .profile-info .welcome {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.header .profile-info .username {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: white; /* Warna putih tebal */
+}
+
+.header .logo {
+    height: 50px;
+}
+
+/* --- T-Wallet Card --- */
+.wallet-card {
+    background: linear-gradient(to right, #888, #666);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-bottom: 24px;
+    color: white;
+}
+
+.wallet-info .balance-title {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+}
+
+.wallet-info .balance-amount {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.top-up-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.top-up-btn .icon-circle {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+/* --- Movie Section --- */
+.section-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    border: 1px solid #555;
+    border-radius: 20px;
+    padding: 6px 12px;
+    width: fit-content;
+    color: #333;
+}
+.section-title i {
+    margin-right: 8px;
+}
+
+.movie-scroller {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.movie-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-card {
+    flex: 0 0 140px;
+    margin-right: 16px;
+}
+
+.movie-poster{
+    width: 140px;
+    height: 207px;
+    object-fit: cover; /* Supaya proporsional, memotong sisanya */
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.movie-title {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    color: #333;
+}
+
+.movie-rating {
+    font-size: 12px;
+    text-align: center;
+    color: #888;
+    margin: 0;
+}
+
+.detail-list {
+    list-style: none;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 12px; /* Samakan dengan profile-summary */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Samakan bayangan */
+    overflow: hidden; /* Agar border-radius diterapkan pada anak elemen */
+    border: 1px solid #e0e0e0;
+}
+
+.detail-list li {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0; /* Perhalus warna border */
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s; /* Tambah transisi halus */
+}
+
+/* Hapus border pada elemen terakhir */
+.detail-list li:last-child {
+    border-bottom: none;
+}
+
+.detail-list i {
+    color: #c00000; /* Ubah warna ikon agar serasi */
+    width: 24px; /* Sesuaikan ukuran */
+    font-size: 18px; /* Sesuaikan ukuran font ikon */
+    text-align: center;
+    margin-right: 20px;
+}
+
+.detail-list .label {
+    color: #666; /* Buat sedikit lebih gelap untuk keterbacaan */
+    font-size: 12px;
+    margin-bottom: 2px; /* Beri sedikit jarak */
+}
+
+.detail-list .value {
+    font-size: 16px;
+    font-weight: 500; /* Buat sedikit lebih tebal */
+    color: #333;
+}
+
+.list-item-button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500; /* Samakan dengan .value */
+    color: #333; /* Warna default */
+    cursor: pointer;
+    display: flex; /* Gunakan flexbox */
+    align-items: center;
+}
+
+/* Memberi warna khusus untuk tombol keluar dan hapus */
+.list-item-button.logout {
+    color: #007bff; /* Warna biru untuk keluar */
+}
+.list-item-button.delete {
+    color: #dc3545; /* Warna merah untuk hapus */
+}
+
+.action-button.btn-edit {
+    display: block;
+    width: auto; /* Jangan full width */
+    margin: 24px auto 0 auto; /* Posisikan di tengah */
+    padding: 12px 32px; /* Atur padding */
+    border-radius: 25px; /* Buat menjadi pil */
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    background-color: #c00000;
+    color: white;
+    box-shadow: 0 4px 10px rgba(192, 0, 0, 0.3); /* Tambah bayangan */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.action-button.btn-edit:hover {
+    background-color: #a00000;
+    transform: translateY(-2px); /* Efek sedikit terangkat saat hover */
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Sudut melengkung */
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9; /* Latar belakang sedikit abu-abu */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efek saat input di-klik (focus) */
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #c00000; /* Border menjadi merah */
+    box-shadow: 0 0 0 3px rgba(192, 0, 0, 0.1); /* Efek glow */
+}
+
+.action-button.btn-confirm {
+    display: block;
+    width: auto; /* Jangan full width */
+    margin: 24px auto 0 auto; /* Posisikan di tengah */
+    padding: 12px 32px; /* Atur padding */
+    border-radius: 25px; /* Buat menjadi pil */
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    background-color: #c00000;
+    color: white;
+    box-shadow: 0 4px 10px rgba(192, 0, 0, 0.3); /* Tambah bayangan */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.action-button.btn-confirm:hover {
+    background-color: #a00000;
+    transform: translateY(-2px); /* Efek sedikit terangkat saat hover */
+}
+
+.location-filter {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.location-filter i {
+    color: #c00000;
+    margin-right: 8px;
+}
+
+.cinema-list {
+    list-style: none; /* Menghilangkan titik/bullet dari list */
+    padding: 0;
+    margin: 0;
+}
+
+.cinema-item a {
+    display: block;
+    background-color: #e9e9e9; /* Warna abu-abu seperti contoh */
+    padding: 20px 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center; /* Membuat teks di tengah */
+    transition: background-color 0.2s, transform 0.2s;
+    border: 1px solid #ddd;
+}
+
+.cinema-item a:hover {
+    background-color: #dcdcdc; /* Warna sedikit lebih gelap saat disentuh */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cinema-banner {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.cinema-details {
+    padding: 16px;
+    background-color: #fff;
+    transform: translateY(-20px); /* Efek tumpuk sedikit ke atas banner */
+    border-radius: 20px 20px 0 0;
+    margin-bottom: -20px;
+}
+
+.cinema-details h2 {
+    margin: 0 0 4px 0;
+    font-size: 20px;
+}
+
+.cinema-details p {
+    margin: 0 0 8px 0;
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.cinema-details i {
+    color: #c00000;
+    margin-right: 8px;
+}
+
+.date-scroller {
+    display: flex;
+    overflow-x: auto;
+    padding: 8px 16px;
+    background: #f0f2f5;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.date-scroller::-webkit-scrollbar { display: none; }
+
+.date-item {
+    flex: 0 0 auto;
+    padding: 10px 16px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.date-item.active {
+    background: #c00000;
+    color: white;
+    border-color: #c00000;
+}
+
+.movie-listing {
+    padding: 16px;
+    background: #fff;
+}
+
+.movie-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.movie-item .poster {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.movie-item .details {
+    flex: 1;
+}
+
+.movie-item h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.room-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.room-type .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c00000;
+}
+
+.showtime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 8px;
+}
+
+.showtime-btn {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* --- CSS BARU UNTUK TAMPILAN DETAIL BIOSKOP --- */
+
+.movie-list-container {
+    padding: 16px;
+    background-color: #fff;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f0f2f5;
+    border-radius: 25px;
+    width: fit-content;
+    margin: 0 auto 24px auto;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-header i {
+    margin-right: 10px;
+    color: #c00000;
+}
+
+.movie-item-detailed {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.movie-item-detailed:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.movie-item-detailed .poster-link {
+    flex-shrink: 0;
+}
+
+.movie-item-detailed .poster {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-item-detailed .poster-link:hover .poster {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.movie-item-detailed .details {
+    flex-grow: 1;
+}
+
+.movie-item-detailed .details h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+}
+
+.movie-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.movie-details-table td {
+    padding: 4px 0;
+    vertical-align: top;
+}
+
+.movie-details-table tr td:first-child {
+    width: 90px;
+    color: #666;
+}
+
+.movie-details-table tr td:last-child {
+    font-weight: 500;
+}
+
+.film-poster-container {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.film-poster-container img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.film-info-grid {
+    display: grid;
+    grid-template-columns: 100px auto; /* Kolom untuk label dan kolom untuk nilai */
+    gap: 8px 16px; /* Jarak antar baris dan kolom */
+    margin-bottom: 24px;
+    padding: 0 16px;
+    font-size: 16px;
+}
+
+.film-info-grid .label {
+    font-weight: 400;
+    color: #666;
+}
+
+.film-info-grid .value {
+    font-weight: 500;
+    color: #333;
+}
+
+.cinema-location-header {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    border-left: 4px solid #c00000;
+    padding-left: 12px;
+}
+
+.schedule-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.schedule-form .form-group label {
+    margin-bottom: 0; /* Hapus margin bawah dari label */
+    flex-basis: 50%; /* Beri ruang untuk label */
+}
+
+.schedule-form .form-group select {
+    flex-basis: 50%; /* Beri ruang untuk dropdown */
+    font-size: 15px;
+}
+
+.bottom-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 420px;
+    background-color: #fff;
+    padding: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.bottom-action-bar .btn-confirm {
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.main-content-with-bottom-bar {
+    padding-bottom: 120px !important; 
+}
+
+.form-control-static {
+    flex-basis: 50%; /* Samakan lebar dengan select box */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-weight: 700; /* Membuat angka harga menjadi tebal */
+    color: black;   /* Memberi warna hitam pada harga */
+    text-align: left; /* Atur perataan teks jika perlu */
+}
